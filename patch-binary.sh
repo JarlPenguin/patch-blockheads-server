@@ -5,6 +5,7 @@ directory=$(pwd)
 cd /tmp
 wget "https://web.archive.org/web/20240309015235if_/https://majicdave.com/share/blockheads_server171.tar.gz" -O blockheads_server171.tar.gz
 tar xzvf blockheads_server171.tar.gz
+rm blockheads_server171.tar.gz
 
 patchelf --replace-needed libgnustep-base.so.1.24 libgnustep-base.so.1.31 blockheads_server171
 patchelf --replace-needed libobjc.so.4.6 libobjc.so.4 blockheads_server171

@@ -6,6 +6,7 @@ if [ "$EUID" -ne 0 ]; then
   exit 1
 fi
 
+apt-get update
 apt-get install libblocksruntime0 libgnustep-base1.31 patchelf wget
 
 wget "https://launchpad.net/ubuntu/+archive/primary/+files/libdispatch0_0~svn197-3.3ubuntu2_amd64.deb" -O "libdispatch0_0~svn197-3.3ubuntu2_amd64.deb"
