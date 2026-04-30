@@ -8,3 +8,7 @@ cd patch-blockheads-server
 sudo ./install-deps.sh
 ./patch-binary.sh
 ```
+
+Replace the placeholders in `bh.service` and copy both `bh.service` and `bh.socket` to `~/.config/systemd/user/`.
+
+Then run `systemctl --user enable --now bh.service`.

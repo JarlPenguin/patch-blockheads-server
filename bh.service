@@ -1,0 +1,16 @@
+[Unit]
+Description=Blockheads Server
+After=network.target
+
+[Service]
+Type=simple
+Sockets=bh.socket
+StandardInput=socket
+StandardOutput=journal
+StandardError=journal
+ExecStart=/home/<user>/.local/bin/blockheads_server171 --load <world id> --owner <owner username> --no-exit
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=default.target
